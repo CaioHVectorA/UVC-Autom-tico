@@ -4,8 +4,8 @@ const Div = (nome,local,tipo,desc,img) => {
   console.log(imglink)
   return (
     <div>
-      <div style={{width: '300px',height: '300px',backgroundImage:imglink,backgroundPosition:'center',backgroundSize:'100%'}}></div>
-    <div style={{height: '245px',background: '#202020',width: '300px',padding: '20px 0px',display: 'grid',justifyContent: 'center',marginBottom: '100px'}}>
+      <div style={{width: '300px',height: '300px',backgroundImage:imglink,backgroundPosition:'center',backgroundSize:'102%'}}></div>
+    <div style={{height: '245px',background: '#131313',width: '300px',padding: '20px 0px',display: 'grid',justifyContent: 'center',marginBottom: '100px'}}>
      <div style={{display: 'flex',minWidth: '300px',justifyContent: 'space-between', marginRight: '-0px'}}>
      <p style={{color: '#e7e7e7',fontFamily: 'Arial',margin: '8px 20px',color: local==='TERRA' ? 'greenyellow' : 'yellow'}}>{local}</p>
      <p style={{color: '#e7e7e7',fontFamily: 'Arial',margin: '8px 20px'}}>{tipo}</p>
@@ -19,6 +19,11 @@ const Div = (nome,local,tipo,desc,img) => {
 )
 }
 
+const GridCaixas = () => {
+  return (
+    <div style={{display: 'grid',gridTemplateColumns: 'repeat(auto-fit,300px)'}}></div>
+  )
+}
 
 
 const App = () => {
@@ -45,11 +50,13 @@ const MR = new hist(
 
 
         return (
-          <ul>
+          <div>
+          <div style={{display: 'grid',gridTemplateColumns: 'repeat(auto-fit,300px)',gap: '130px',marginLeft: '4%',marginRight: '4%'}}>
             {AllHists.map(({nome,local,tipo,descricao,img}) => (
               Div(nome,local,tipo,descricao,img)
             ))}
-          </ul>
+          </div>
+          </div>
 )}
 
 export default App;
