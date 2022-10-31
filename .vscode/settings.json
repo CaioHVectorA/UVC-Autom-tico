@@ -6,6 +6,7 @@
     ".gitignore": true,
     "package.json": true,
     "package-lock.json": true,
-    "public": false,
+    "public": true,
+    "README.md": true,
   }
 }

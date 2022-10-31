@@ -1,3 +1,4 @@
+import Header from "./components/Header"
 
 const Div = (nome,local,tipo,desc,img) => {
   const imglink = 'url('+img+')'
@@ -43,14 +44,21 @@ const MR = new hist(
     'MR.png'
     )
     
-    const Ciec = new hist('Ciecon ','SOLO','Universal','Entenda a Origem de Ciecon,que ganhou um poder sobrenatural e decide que irá entregar sua vida para salvar o universo.','Ciecon.jpg')
+    const Ciec = new hist('Ciecon','SOLO','Universal','Entenda a Origem de Ciecon,que ganhou um poder sobrenatural e decide que irá entregar sua vida para salvar o universo.','Ciecon.jpg')
     const Kerry = new hist('Kerry','SOLO','TERRA','O Sistema destruiu a vida de Kerry. Mas quando ele se levanta,seu único desejo é a vingança.','Kerry.png')
     const Guard = new hist('Guardiões','serie','TERRA','Se aprofunde na história da nascença dos lendários heróis de Beatus.','Guard.png')
-    const AllHists = [MR,Ciec,Kerry,Guard]
+    const Guard2 = new hist('Guardiões','serie','TERRA','Se aprofunde na história da nascença dos lendários heróis de Beatus.','Guard.png')
+    const Guard3 = new hist('Guardiões','serie','TERRA','Se aprofunde na história da nascença dos lendários heróis de Beatus.','Guard.png')
+    const Guard4 = new hist('Guardiões','serie','TERRA','Se aprofunde na história da nascença dos lendários heróis de Beatus.','Guard.png')
+    const Guard5 = new hist('Guardiões','serie','TERRA','Se aprofunde na história da nascença dos lendários heróis de Beatus.','Guard.png')
+    const Guard6 = new hist('Guardiões','serie','TERRA','Se aprofunde na história da nascença dos lendários heróis de Beatus.','Guard.png')
+    const Guard7 = new hist('Guardiões','serie','TERRA','Se aprofunde na história da nascença dos lendários heróis de Beatus.','Guard.png')
+    const AllHists = [MR,Ciec,Kerry,Guard,Guard2,Guard3,Guard4,Guard5,Guard6,Guard7]
 
 
         return (
           <div>
+            <Header />
           <div style={{display: 'grid',gridTemplateColumns: 'repeat(auto-fit,300px)',gap: '130px',marginLeft: '4%',marginRight: '4%'}}>
             {AllHists.map(({nome,local,tipo,descricao,img}) => (
               Div(nome,local,tipo,descricao,img)
